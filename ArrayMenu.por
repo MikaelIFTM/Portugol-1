@@ -14,7 +14,7 @@
 
 programa {
   funcao inicio() {
-    inteiro vetor[15], i, menu = 2, opcao = 0, indice, valor, valor2, decidir = 0
+    inteiro vetor[15], i, menu = 2, opcao = 0, indice, valor, valor2, decidir = 0, j=0
  
     escreva("'1' Para começar, '0' Para sair:  ")
       leia(menu)
@@ -37,13 +37,20 @@ programa {
           limpa()
           opcao = 6
 
-          escreva("Qual dos índices de 0 a 15 você deseja cadastrar?:  ")
+          para(i=0;i<15;i++){
+            escreva(i,"º[", vetor[i], "]; ")
+          }
+
+          escreva("\nQual dos índices de 0 a 15 você deseja cadastrar?:  ")
             leia(indice)
           escreva("Qual valor você quer cadastrar?:  ")
             leia(valor)
           limpa()
           vetor[indice] = valor
-          escreva("**** O índice ",indice, " Agora guarda o valor ", valor, "!! ****")
+          para(i=0;i<15;i++){
+            escreva(i,"º[", vetor[i], "]; ")
+          }
+          escreva("\n**** O índice ",indice, " Agora guarda o valor ", valor, "!! ****")
 
           escreva("\n1 - Para cadastrar mais valores.\n2 - Para voltar ao menu.  ")
             leia(decidir)
@@ -97,7 +104,33 @@ programa {
             escreva(i,"º[", vetor[i], "]; ")
           }
           escreva("\n**** O número ",valor, " foi multiplicado no índice ", indice, " ****")
+
+          escreva("\n1 - Para multiplicar mais valores.\n2 - Para voltar ao menu.  ")
+            leia(decidir)
+          se(decidir == 1){
+            opcao = 3
+          }
+          senao se(decidir == 2){
+            menu = 1
+          }
           
+        }
+
+        enquanto(opcao==4){
+          opcao = 6
+          i=0
+          limpa()
+
+          para(i=0;i<15;i++){
+            escreva(i,"º[", vetor[i], "]; ")
+          }
+          para(i=0;i<15;i++){
+            vetor[i]++
+          }
+
+
+
+          escreva("\nTodos os valores foram incrementados com 1")
         }
     }
 
