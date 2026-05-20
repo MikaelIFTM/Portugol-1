@@ -5,7 +5,7 @@ programa {
     inteiro l=0, c=0, valor, matriz[11][11], x=0, y=0, menu = 0, opcao = 0, decidir = 0, ordem = 0
 
 	enquanto(menu==0){
-		
+		limpa()
 		escreva("------------\n")
 		escreva("1 - Gerar matriz aleatória\n")
 		escreva("2 - Imprimir Diagonal Principal\n")
@@ -17,7 +17,7 @@ programa {
 			leia(opcao)
 		menu=1
 		
-	}
+	
 			
 	enquanto(opcao==1){
 		opcao=0
@@ -44,6 +44,27 @@ programa {
 	  		menu = 0
 	  	}
 	}
+
+	se(opcao==2){
+		escreva("Imprimindo Diagonal Principal...\n")
+		escreva("[",matriz[1][1],"]","[",matriz[2][2],"]","[",matriz[3][3],"]\n")
+		escreva("\n1 - Menu\n ")
+	  		leia(decidir)
+	  	se(decidir==1){
+	  		menu = 0
+	  	}
+	}
+
+	se(opcao==3){
+		escreva("Imprimindo Diagonal Secundária...\n")
+		escreva("[",matriz[3][1],"]","[",matriz[2][2],"]","[",matriz[1][3],"]\n")
+		escreva("\n1 - Menu\n ")
+	  		leia(decidir)
+	  	se(decidir==1){
+	  		menu = 0
+	  	}
+		
+	}
 		
 	se(opcao==4){
 	  	escreva("De qual ordem deseja?  (2/4):  ")
@@ -54,6 +75,12 @@ programa {
 	  		matriz[2][2] = 1
 	  		escreva("[",matriz[1][1],"]","[",matriz[1][2],"]\n")
 	  		escreva("[",matriz[2][1],"]","[",matriz[2][2],"]\n")
+	  		
+	  		escreva("\n1 - Menu\n ")
+	  		leia(decidir)
+	  	se(decidir==1){
+	  		menu = 0
+	  	}
 	  	}
 
 	  	se(ordem==3){
@@ -63,6 +90,12 @@ programa {
 	  		escreva("[",matriz[1][1],"]",matriz[1][2],"[",matriz[1][3],"]\n")
 	  		escreva("[",matriz[2][1],"]",matriz[2][2],"[",matriz[2][3],"]\n")
 	  		escreva("[",matriz[3][1],"]",matriz[3][2],"[",matriz[3][3],"]\n")
+
+	  		escreva("\n1 - Menu\n ")
+	  		leia(decidir)
+	  	se(decidir==1){
+	  		menu = 0
+	  	}
 	  	}
 
 	  	se(ordem==4){
@@ -74,22 +107,16 @@ programa {
 	  		escreva("[",matriz[2][1],"]","[",matriz[2][2],"]","[",matriz[2][3],"]","[",matriz[2][4],"]\n")
 	  		escreva("[",matriz[3][1],"]","[",matriz[3][2],"]","[",matriz[3][3],"]","[",matriz[3][4],"]\n")
 	  		escreva("[",matriz[4][1],"]","[",matriz[4][2],"]","[",matriz[4][3],"]","[",matriz[4][4],"]\n")
+
+	  		escreva("\n1 - Menu\n ")
+	  		leia(decidir)
+	  	se(decidir==1){
+	  		menu = 0
+	  	}
 	  	}
 	  }
-
+	}
 	  //sair
 			
   }
 }
-
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 1765; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
