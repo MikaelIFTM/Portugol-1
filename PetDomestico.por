@@ -29,6 +29,8 @@ programa
 		escreva("-----------------\n")
 			leia(opcao)
 
+		limpa()
+
 		escolha(opcao){
 			
 		caso 1:
@@ -38,9 +40,14 @@ programa
 			inventario()
 		
 		caso 3:
-			petShop()
+			
 
 		caso 4:
+
+		caso 5:
+
+		caso 6:
+			status()
 		
 		}
 	}
@@ -49,7 +56,14 @@ programa
 		escreva("teste")
 	}
 
-	funcao inventario()
+	funcao inventario(){
+		escreva("")
+	}
+
+	funcao status(){
+		inteiro saude=100, fome=100, sede=100
+		escreva("* Saúde %", saude,"\n* Fome %", fome, "\n* Sede %", sede)
+	}
 	
 	funcao inicio(){
 	cadeia nome = "a"
