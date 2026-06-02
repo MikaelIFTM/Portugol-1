@@ -40,6 +40,7 @@ programa
 			inventario()
 		
 		caso 3:
+		petShop()
 			
 
 		caso 4:
@@ -52,12 +53,15 @@ programa
 		}
 	}
 
-	funcao alimentar(){
-		escreva("teste")
+	funcao inventario(inteiro racao = 100, inteiro frango, inteiro petisco){
+		escreva("-----Seus items-----")
+		escreva("Ração")
+		escreva("Frango")
+		escreva("Petisco")
 	}
 
-	funcao inventario(){
-		escreva("")
+	funcao petShop(inteiro racao = 100 , inteiro frango = 150, inteiro petisco = 210){
+		escreva("Ração",)
 	}
 
 	funcao status(){
