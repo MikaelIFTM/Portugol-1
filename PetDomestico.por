@@ -33,35 +33,51 @@ programa
 
 		escolha(opcao){
 			
-		caso 1:
-			alimentar()	
+		caso 1:	
 		
 		caso 2:
-			inventario()
 		
 		caso 3:
-		petShop()
-			
-
+			petShop()
 		caso 4:
 
 		caso 5:
 
 		caso 6:
-			status()
+			
 		
 		}
 	}
 
-	funcao inventario(inteiro racao = 100, inteiro frango, inteiro petisco){
-		escreva("-----Seus items-----")
-		escreva("Ração")
-		escreva("Frango")
-		escreva("Petisco")
+	funcao inventario(){
+		inteiro racao=100, frango, petisco, opcao=0
+		escreva("-----Seus items-----\n")
+		escreva("Ração\n")
+		escreva("Frango\n")
+		escreva("Petisco\n")
+		escreva("* [0] - Voltar ao Menu\n")
+			leia(opcao)
+			
+		escolha(opcao){
+			caso 0:
+			menu()
+		}
 	}
 
-	funcao petShop(inteiro racao = 100 , inteiro frango = 150, inteiro petisco = 210){
-		escreva("Ração",)
+	funcao petShop(){
+		inteiro racao = 100 , frango = 150, petisco = 60, opcao=10
+		escreva("=========================")
+		escreva("* [1] - Ração 100$")
+		escreva("* [2] - Frango 150$")
+		escreva("* [3] - Ração 60$")
+		escreva("* [0] - Voltar ao Menu\n")
+		escreva("=========================")
+			leia(opcao)
+			
+		escolha(opcao){
+			caso 0:
+			menu()
+		}
 	}
 
 	funcao status(){
